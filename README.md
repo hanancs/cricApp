@@ -1,4 +1,4 @@
-# timer
+# CricApp-U
 
 A new Flutter project.
 
