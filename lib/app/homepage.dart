@@ -22,10 +22,10 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Cric App-U'),
         centerTitle: true,
-        elevation: 4.0,
+        elevation: 1.0,
         leading: Image.asset('images/cricapptran.png'),
         actions: <Widget>[
-          TextButton(
+          FlatButton(
             child: Text(
               'Sign Out',
               style: TextStyle(

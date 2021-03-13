@@ -93,6 +93,11 @@ class SignInPage extends StatelessWidget {
             textColor: Colors.black54,
             onPressed: _signInAnonymously,
           ),
+          SizedBox(height: 35.0),
+          Text(
+            '© Calistus, 2021',
+            textAlign: TextAlign.center,
+          )
         ],
       ),
     );
