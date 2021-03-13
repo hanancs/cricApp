@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:timer/app/HomeComponents/homecompo.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key key, @required this.onSignOut}) : super(key: key);
@@ -19,7 +20,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('HomePage'),
+        title: Text('Cric App-U'),
+        centerTitle: true,
+        elevation: 4.0,
+        leading: Image.asset('images/cricapptran.png'),
         actions: <Widget>[
           TextButton(
             child: Text(
@@ -33,94 +37,58 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            Container(
-              alignment: Alignment.center,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text(
-                    'Demistyfying Batting Average',
-                    style: TextStyle(fontSize: 18),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.yellow[200],
-                  borderRadius: BorderRadius.all(Radius.circular(20))),
-              height: 100,
-              width: 400,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              alignment: Alignment.center,
-              child: Text(
-                'Unbouding Bowling Average',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.yellow,
-                  borderRadius: BorderRadius.all(Radius.circular(20))),
-              height: 100,
-              width: 400,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              alignment: Alignment.center,
-              child: Text(
-                'A Glance at D/L Law',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.yellow[200],
-                  borderRadius: BorderRadius.all(Radius.circular(20))),
-              height: 100,
-              width: 400,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              alignment: Alignment.center,
-              child: Text(
-                'Teams Ratings & Ranking',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.yellow,
-                  borderRadius: BorderRadius.all(Radius.circular(20))),
-              height: 100,
-              width: 400,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              alignment: Alignment.center,
-              child: Text(
-                'Individual Ratings & Ranking',
-                style: TextStyle(fontSize: 18),
-                textAlign: TextAlign.center,
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.yellow[200],
-                  borderRadius: BorderRadius.all(Radius.circular(20))),
-              height: 100,
-              width: 400,
-            ),
-          ],
-        ),
+      body: buildPadding(),
+    );
+  }
+
+  Padding buildPadding() {
+    return Padding(
+      padding: EdgeInsets.all(16.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          HomeCompo(
+            text: 'Demstyfying Batting Average',
+            assetName: 'images/batting.png',
+            color: Colors.yellow[200],
+            textColor: Colors.black54,
+            onPressed: () {},
+          ),
+          SizedBox(height: 20.0),
+          HomeCompo(
+            text: 'Unbounding Bowling Average',
+            assetName: 'images/bowling.png',
+            color: Colors.yellow[200],
+            textColor: Colors.black54,
+            onPressed: () {},
+          ),
+          SizedBox(height: 20.0),
+          HomeCompo(
+            text: 'A Glance at D/L Law',
+            assetName: 'images/law.png',
+            color: Colors.yellow[200],
+            textColor: Colors.black54,
+            onPressed: () {},
+          ),
+          SizedBox(height: 20.0),
+          HomeCompo(
+            text: 'Teams Rankings & Ratings',
+            assetName: 'images/rating.png',
+            color: Colors.yellow[200],
+            textColor: Colors.black54,
+            onPressed: () {},
+          ),
+          SizedBox(height: 20.0),
+          HomeCompo(
+            text: 'Individuals Rankings & Ratings',
+            assetName: 'images/rating.png',
+            color: Colors.yellow[200],
+            textColor: Colors.black54,
+            onPressed: () {},
+          ),
+          SizedBox(height: 10.0),
+        ],
       ),
     );
   }

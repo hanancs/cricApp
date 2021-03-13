@@ -59,6 +59,10 @@ flutter:
    - images/cricapp.png
    - images/cricapptran.png
    - images/email.png
+   - images/batting.png
+   - images/bowling.png
+   - images/law.png
+   - images/rating.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
